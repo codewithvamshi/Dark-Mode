@@ -1,0 +1,55 @@
+:root {
+    --bg-color: #fefefe;
+    --text-color: #212121;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #e0e0e0;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color); 
+  font-family: "Playfair Display";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 200px;
+  height: 100px;
+  background-color: #070707;
+  border-radius: 50px;
+  position: relative;
+  transition: .4s;
+}
+
+.toggle-button:before{
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  top: 0;
+  bottom: 0;
+  background-color: #bdbdbd;
+  transition: .4s;
+}
+
+.toggle-button:checked {
+  background-color: #ffffff;
+}
+
+.toggle-button:checked:before {
+  transform: translate(100%);
+  background-color: #212121;
+  transition: .4s;
+}
